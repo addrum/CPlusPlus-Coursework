@@ -26,3 +26,12 @@
 *.exe
 *.out
 *.app
+
+.codelite
+.clang
+C++ Project.workspace
+Makefile
+CPP_Coursework.mk
+CPP_Coursework.project
+CPP_Coursework.txt
+Debug
