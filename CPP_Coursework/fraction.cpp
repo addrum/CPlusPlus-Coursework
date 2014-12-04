@@ -5,7 +5,7 @@ using namespace std;
 
 fraction::fraction()
 {
-	
+	denominator = 1;
 }
 
 fraction::fraction(int n)
@@ -62,54 +62,42 @@ void fraction::setDenominator(const int n)
 	denominator = n;
 }
 
-fraction &fraction::operator+=(const fraction &o)
+fraction fraction::operator+=(const fraction &o)
 {
-	fraction newFraction;
-	
 	int a = getNumerator() * o.getDenominator();
 	int b = o.getNumerator() * getDenominator();
 	int c = o.getDenominator() * getDenominator();
 	int d = a+b;
 	int e = gcd(d,c);
 
-	newFraction.setNumerator(d/e);
-	newFraction.setDenominator(c/e);
-
+	fraction newFraction(d/e,c/e);
 	return newFraction;
 }
 
-fraction &fraction::operator-=(const fraction &o)
+fraction fraction::operator-=(const fraction &o)
 {
-	fraction newFraction;
-	
 	int a = getNumerator() * o.getDenominator();
 	int b = o.getNumerator() * getDenominator();
 	int c = o.getDenominator() * getDenominator();
 	int d = a-b;
 	int e = gcd(d,c);
-
-	newFraction.setNumerator(d/e);
-	newFraction.setDenominator(c/e);
-
+	
+	fraction newFraction(d/e,c/e);
 	return newFraction;
 }
 
-fraction &fraction::operator*=(const fraction &o)
+fraction fraction::operator*=(const fraction &o)
 {
-	fraction newFraction;
-	
 	int a = getNumerator() * o.getNumerator();
 	int b = getDenominator() * o.getDenominator();
 	int c = gcd(a,b);
-	newFraction.setNumerator(a/c);
-	newFraction.setDenominator(b/c);
-
+	
+	fraction newFraction(a/c,b/c);
 	return newFraction;
 }
 
-fraction &fraction::operator/=(const fraction &o)
+fraction fraction::operator/=(const fraction &o)
 {
-	fraction newFraction;
 	int check = 1;
 	if(o.getNumerator()<0){
 		check = -1;
@@ -117,10 +105,8 @@ fraction &fraction::operator/=(const fraction &o)
 	int a = getNumerator() * o.getDenominator();
 	int b = getDenominator() * o.getNumerator();
 	int c = gcd(a,b);
-
-	newFraction.setNumerator(check*a/c);
-	newFraction.setDenominator(check*b/c);
-
+	
+	fraction newFraction(check*a/c,check*b/c);
     return newFraction;
 }
 

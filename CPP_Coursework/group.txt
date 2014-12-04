@@ -1,0 +1,4 @@
+Estimation of amount of work each member did:
+	Samat Kuandykov:		40%
+	Adam Short:				30%
+	Tomas Michalkevic:		30%

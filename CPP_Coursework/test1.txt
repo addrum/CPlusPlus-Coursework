@@ -1,0 +1,27 @@
+Components tested:
+	fraction::fraction();
+	fraction::fraction(int numerator);
+	fraction::fraction(int numerator,int denominator);
+	ostream & operator<<( ostream &os, const fraction &o)
+
+-------
+
+We have written the following code in main() of cwk.cpp to test fraction.cpp:
+	fraction fr1;
+	fraction fr2(25);
+	fraction fr3(70,89);
+	fr1.setNumerator(5);
+	fr1.setDenominator(72);
+	cout << fr1 << endl << fr2 << endl << fr3 << endl;
+
+-------
+
+The output received was:
+	5/72
+	25/1
+	70/89
+
+-------
+
+All of these numbers recorded correctly and quickly.
+-------

@@ -6,6 +6,7 @@ class fraction {
 		fraction();
 		fraction(int n);
 		fraction(int n, int m);
+		operator double() const {double dbl = numerator; dbl = dbl/static_cast<double>(denominator); return dbl;}
 		int getNumerator() const;
 		int getDenominator() const;
 		void setNumerator(const int n);
@@ -18,10 +19,11 @@ class fraction {
 		bool operator>(const fraction &o);
 		bool operator<=(const fraction &o);
 		bool operator>=(const fraction &o);
-		fraction &operator+=(const fraction &o);
-		fraction &operator-=(const fraction &o);
-		fraction &operator*=(const fraction &o);
-		fraction &operator/=(const fraction &o);
+		fraction operator+=(const fraction &o);
+		fraction operator-=(const fraction &o);
+		fraction operator*=(const fraction &o);
+		fraction operator/=(const fraction &o);
+
 	private:
 		int numerator;
 		int denominator;

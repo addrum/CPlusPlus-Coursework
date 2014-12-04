@@ -1,0 +1,26 @@
+Components tested:
+	ostream & operator<<( ostream &os, const fraction &o)
+	ostream & operator>>( ostream &os, const fraction &o)
+-------
+
+We have written the following code in main() of main.cpp to test fraction.cpp:
+	fraction fr;
+	cin >> fr;
+	cout << fr << endl;
+
+-------
+
+The inputs we entered (one at a time) in the console were:
+	213/2324
+	4213/214324
+	354123/234
+
+-------
+
+The outputs received were:
+	213/2324
+	4213/214324
+	354123/234
+-------
+The result was that the numbers were recorded correctly and quickly.
+-------

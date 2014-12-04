@@ -1,0 +1,40 @@
+Components tested:
+	All components used for calculating values in fraction.cpp
+	
+-------
+
+We have written the following code in main() of cwk.cpp to test fraction.cpp:
+	fraction fr(5,1);
+	fraction fr2(24,5);
+	cout	<< fr		<< endl
+			<< fr.getNumerator()	<< endl		<< fr.getDenominator()	<< endl
+			<< fr.gcd(fr.getNumerator(),fr.getDenominator())	<< endl	<< fr.lcm(fr.getNumerator(),fr.getDenominator())	<< endl
+			<< (fr == fr2)	<< endl	<< (fr != fr2) << endl	<< (fr > fr2)	<<	endl	<< (fr >= fr2)	<<	endl
+			<< (fr < fr2)	<< endl	<< (fr <= fr2)	<< endl	<< (fr/fr2)		<<	endl	<< (fr/10)		<<	endl
+			<< (fr+fr2)		<< endl	<< (fr+5)		<< endl	<< (fr-fr2)		<< endl		<< (fr*fr2)		<<	endl
+			<< (fr*5)		<< endl << (fr+=10)		<< endl	<< (fr-=fr2)	<< endl		<< (fr/fr2);
+			
+-------
+
+The ouput received was:
+	5/1
+	5
+	1
+	1
+	5
+	0
+	1
+	1
+	1
+	0
+	0
+	25/24
+	1/2
+	49/5
+	10/1
+	1/5
+	24/1
+	
+-------
+We have tested every value with a normal calculator, and the code ouput did match the calculator output.
+-------
